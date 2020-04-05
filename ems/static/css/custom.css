@@ -1,0 +1,89 @@
+body{
+	background-image: url('../img/back_1.png');
+}
+
+.no-link a{
+	text-decoration: none;
+}
+
+.profile-details{
+	margin: 20px;
+}
+
+.profile-details th{
+	width:50%;
+}
+
+.add-edit-employee input{
+
+  width: 50%;
+  padding: 10px;
+  margin: 4px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.add-edit-employee select{
+  background-color: #eff7f7;
+  color: #888;
+  padding: 8px 16px;
+  border: 1px solid #d3dede;
+  cursor: pointer;
+}
+
+.float-left{
+	float: left;
+}
+
+.float-right{
+	float: right;
+}
+
+.card-signin {
+  border: 0;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.form-signin{
+	width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto
+}
+
+.form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+}
+.form-signin .btn {
+  margin-top: 5px;
+  margin-left:130px;
+  font-size: 80%;
+  border-radius: 5rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.login-page{
+position: absolute;
+left:34%;
+top:30%;
+}
+
+
+ table { 
+                border-collapse: collapse; 
+            } 
+            th, td { 
+                /*width:150px; */
+                text-align:center;
+                padding:5px 
+              
+            }  

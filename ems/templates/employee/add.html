@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<form action='.' method="POST" style="padding: 10px;">
+	{% csrf_token %}
+	<table class="table table-striped add-edit-employee">
+	{{user_form.as_table}}
+	</table>
+	<div style="float: right;">
+		<input type="submit" name="submit" value="Add Employee" class="btn btn-success" />
+	</div>
+</form>
+
+{% endblock %}

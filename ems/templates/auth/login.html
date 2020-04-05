@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card card-signin my-5 login-page" style="width: 35%;">
+	<div class="card-body">
+		<form method="POST" class="form-signin">
+			{% csrf_token %}
+			<table>
+				
+				<tr>
+					<div class="form-label-group">
+						<td><label for = "username">Username</label></td>
+						<td><input type="text" name="username" class="form-control" required></td>
+					</div>
+				</tr>
+
+				<tr>
+					 <div class="form-label-group">
+						<td><label for = "password">Password</label></td>
+						<td><input type="password" name="password" class="form-control" required></td>
+					</div>
+				</tr>
+				<p style="color: red;">{{login_error}}</p>
+			</table>
+			<button type="submit" class="btn btn-success btn-lg">Login</button>
+		</form>
+	</div>
+</div>
+{% endblock content %}
