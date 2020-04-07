@@ -104,7 +104,7 @@ def employee_delete(request, id=None):
 
 class ProfileUpdate(UpdateView):
 	# model = Profile
-	fields = ['designation', 'salary']
+	fields = ['designation', 'salary', 'picture']
 	template_name = 'auth/profile_update.html'
 	success_url = reverse_lazy('my_profile')
 

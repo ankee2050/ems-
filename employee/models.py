@@ -7,12 +7,29 @@ class Profile(models.Model):
 	user = models.OneToOneField(User, on_delete=models.CASCADE)
 	designation = models.CharField(max_length=20, null=False, blank=False)
 	salary = models.IntegerField(null=True, blank=True)
+	picture = models.ImageField(upload_to='profile_pictures/%Y/%m/%d/', max_length=255, null=True, blank=True)
 
 	class Meta:
 		ordering = ('-salary',)
 
 	def __str__(self):
 		return "{0} {1}".format(self.user.first_name, self.user.last_name)
+
+class EmployeeManager(models.Manager):
+
+	def get_queryset(self):
+		return super().get_queryset().filter(profile__designation='Employee')
+
+
+class Employee(User):
+	class Meta:
+		ordering = ('last_name',)
+		proxy = True
+
+	objects = EmployeeManager()
+
+	def full_name(self):
+		return self.first_name+"-"+self.last_name
 
 @receiver(post_save, sender=User)
 def user_is_created(sender, instance, created, **kwargs):

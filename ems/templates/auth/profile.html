@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 
@@ -23,6 +24,17 @@
     <tr>
       <th scope="row">Salary</th>
       <td>{{object.salary}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Profile Picture</th>
+      <td>
+
+        {% if object.picture %}
+        <img class="profile-pic" src="{{object.picture.url}}" />
+        {% else %}
+        <img class="profile-pic" src="{% static 'img/default_profile/default.jpg' %}" />
+        {% endif %}
+      </td>
     </tr>
   </tbody>
 </table>
